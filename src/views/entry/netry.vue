@@ -19,21 +19,26 @@
             :name="ItemMenuItemIndex+ItemMenuItem.id"
             v-for="(ItemMenuItem,ItemMenuItemIndex) in SubmenuItem.MenuItem"
             :key="ItemMenuItemIndex"
-            @click.native="leftColumnEventAssignment"
-          >{{ ItemMenuItemIndex }}</MenuItem>
+            @click.native.stop="leftColumnEventAssignment(ItemMenuItem.id)"
+          >
+            <Icon type="ios-bulb-outline" />
+            {{ ItemMenuItem.MenuItemTitle }}
+          </MenuItem>
         </Submenu>
       </Menu>
     </Sider>
     <Layout :style="{marginLeft: '300px'}">
-      <Header :style="{background: '#fff', boxShadow: '0 2px 3px 2px rgba(0,0,0,.1)'}">小虞儿</Header>
+      <Header :style="{background: '#fff', boxShadow: '0 2px 3px 2px rgba(0,0,0,.1)'}">
+        <h2 class="topTitle">小虞儿语录</h2>
+      </Header>
       <Content :style="{padding: '0 16px 16px'}">
         <Breadcrumb :style="{margin: '16px 0'}">
-          <BreadcrumbItem>Home</BreadcrumbItem>
-          <BreadcrumbItem>Components</BreadcrumbItem>
-          <BreadcrumbItem>Layout</BreadcrumbItem>
+          <BreadcrumbItem>首页</BreadcrumbItem>
+          <BreadcrumbItem>组件</BreadcrumbItem>
+          <BreadcrumbItem>页面</BreadcrumbItem>
         </Breadcrumb>
-        <Card>
-          <div style="height: 600px">
+        <Card style="height:auto">
+          <div style="height: auto">
             <router-view></router-view>
           </div>
         </Card>
@@ -52,8 +57,16 @@ export default {
   },
   methods: {
     // 左侧栏事件分配
-    leftColumnEventAssignment() {
-      console.log('左侧栏事件分配')
+    leftColumnEventAssignment(ItemMenuItemId) {
+      if (ItemMenuItemId == 11 && this.$route.fullPath != '/array') {
+        this.$router.push({
+          path: '/array',
+        })
+      } else if (ItemMenuItemId == 12 && this.$route.fullPath != '/traversal') {
+        this.$router.push({
+          path: '/traversal',
+        })
+      }
     },
   },
 }

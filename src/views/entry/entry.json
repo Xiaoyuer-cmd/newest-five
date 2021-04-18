@@ -1,17 +1,13 @@
 {
     "Submenu": [{
-            "SubmenuTitle": "JS数组操作",
+            "SubmenuTitle": "数组篇",
             "MenuItem": [{
-                    "MenuItemTitle": "Option 1",
+                    "MenuItemTitle": "数组操作方法",
                     "id": 11
                 },
                 {
-                    "MenuItemTitle": "Option 2",
+                    "MenuItemTitle": "数组遍历方法",
                     "id": 12
-                },
-                {
-                    "MenuItemTitle": "Option 3",
-                    "id": 13
                 }
             ]
         },

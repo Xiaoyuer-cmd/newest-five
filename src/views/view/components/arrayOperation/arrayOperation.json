@@ -1,0 +1,339 @@
+{
+    "Title1": "@、shift:删除原数组第一项，并返回删除元素的值；如果数组为空则返回undefined",
+    "ArrayMethod1": [{
+            "Count": "var a = [1,2,3,4,5];"
+        },
+        {
+            "Count": "var b = a.shift()"
+        },
+        {
+            "Count": "输出：a:[2,3,4,5] b:1 "
+        }
+    ],
+    "Title2": "@、unshift:将参数添加到原数组开头，并返回数组的长度 ",
+    "ArrayMethod2": [{
+            "Count": "var a = [1, 2, 3, 4, 5]"
+        },
+        {
+            "Count": "var b = a.unshift(-2, -1)"
+        },
+        {
+            "Count": "输出： a:[-2,-1,1,2,3,4,5] b:7 "
+        }
+    ],
+    "Title3": "@、pop:删除原数组最后一项，并返回删除元素的值；如果数组为空则返回undefined  ",
+    "ArrayMethod3": [{
+            "Count": "var a = [1, 2, 3, 4, 5];"
+        },
+        {
+            "Count": "var b = a.pop();  "
+        },
+        {
+            "Count": "输出： //a:[1,2,3,4] b:5 "
+        }
+    ],
+    "Title4": "@、push:将参数添加到原数组末尾，并返回数组的长度  ",
+    "ArrayMethod4": [{
+            "Count": "var a = [1, 2, 3, 4, 5];"
+        },
+        {
+            "Count": "var b = a.push(6, 7);   "
+        },
+        {
+            "Count": "输出：a:[1,2,3,4,5,6,7] b:7"
+        }
+    ],
+    "Title5": "@、concat:返回一个新数组，是将参数添加到原数组中构成的 ",
+    "ArrayMethod5": [{
+            "Count": " var a = [1, 2, 3, 4, 5];"
+        },
+        {
+            "Count": " var b = a.concat(6, 7); "
+        },
+        {
+            "Count": "输出：a:[1,2,3,4,5] b:[1,2,3,4,5,6,7] "
+        }
+    ],
+    "Title6": "@、splice(start,deleteCount,val1,val2,...):从start位置开始删除deleteCount项，并从该位置起插入val1,val2,...  ",
+    "ArrayMethod6": [{
+            "Count": "var a = [1, 2, 3, 4, 5];"
+        },
+        {
+            "Count": " var b = a.splice(2, 2, 7, 8, 9); //a:[1,2,7,8,9,5] b:[3,4]   "
+        },
+        {
+            "Count": "var b = a.splice(0, 1); //同shift   "
+        },
+        {
+            "Count": " a.splice(0, 0, -2, -1);t   "
+        },
+        {
+            "Count": "  var b = a.length; //同unshift   "
+        },
+        {
+            "Count": "   var b = a.splice(a.length - 1, 1); //同pop     "
+        },
+        {
+            "Count": " a.splice(a.length, 0, 6, 7);   "
+        },
+        {
+            "Count": " var b = a.length; //同push   "
+        }
+    ],
+    "Title7": "@、reverse:将数组反序  ",
+    "ArrayMethod7": [{
+            "Count": "var a = [1, 2, 3, 4, 5]"
+        },
+        {
+            "Count": "var b = a.reverse(); //a:[5,4,3,2,1] b:[5,4,3,2,1]  "
+        }
+    ],
+    "Title8": "@、sort(orderfunction):按指定的参数对数组进行排序 ",
+    "ArrayMethod8": [{
+            "Count": "var a = [1,2,3,4,5];   "
+        },
+        {
+            "Count": "var b = a.sort(); //a:[1,2,3,4,5] b:[1,2,3,4,5]  "
+        },
+        {
+            "Count": "参数可选: 规定排序顺序的比较函数"
+        },
+        {
+            "Count": "默认情况下sort()方法没有传比较函数的话，默认按字母升序，如果不是元素不是字符串的话，会调用toString()方法将元素转化为字符串的Unicode(万国码)位点，然后再比较字符 "
+        },
+        {
+            "Count": "比较函数的两个参数： "
+        },
+        {
+            "Count": "sort的比较函数有两个默认参数， 要在函数中接收这两个参数， 这两个参数是数组中两个要比较的元素， 通常我们用 a 和 b 接收两个将要比较的元素： "
+        },
+        {
+            "Count": "若比较函数返回值<0，那么a将排到b的前面; "
+        },
+        {
+            "Count": "若比较函数返回值=0，那么a 和 b 相对位置不变；"
+        },
+        {
+            "Count": "若比较函数返回值 > 0， 那么b 排在a 将的前面； "
+        },
+        {
+            "Count": "实例： "
+        },
+        {
+            "Count": "数组元素为数字的升序"
+        },
+        {
+            "Count": "var array = [10, 1, 3, 4,20,4,25,8];"
+        },
+        {
+            "Count": "array.sort(function(a,b){ "
+        },
+        {
+            "Count": "return a-b; "
+        },
+        {
+            "Count": "}); "
+        }
+    ],
+    "Title9": "@、slice(start,end):返回从原数组中指定开始下标到结束下标之间的项组成的新数组  ",
+    "ArrayMethod9": [{
+            "Count": "var a = [1,2,3,4,5]; "
+        },
+        {
+            "Count": "var b = a.slice(2,5); //a:[1,2,3,4,5] b:[3,4,5]  "
+        }
+    ],
+    "Title10": "@、join(separator):将数组的元素组起一个字符串，以separator为分隔符，省略的话则用默认用逗号为分隔符数组  ",
+    "ArrayMethod10": [{
+            "Count": "var a = [1,2,3,4,5]; "
+        },
+        {
+            "Count": "var b = a.join(‘ | ');  "
+        },
+        {
+            "Count": "输出：a:[1,2,3,4,5] b:1|2|3|4|5"
+        }
+    ],
+    "Title11": "@、ES6 Array.of() 返回由所有参数值组成的数组 ",
+    "ArrayMethod11": [{
+            "Count": "定义：返回由所有参数值组成的数组，如果没有参数，就返回一个空数组"
+        },
+        {
+            "Count": "目的：Array.of() 出现的目的是为了解决上述构造器因参数个数不同，导致的行为有差异的问题  "
+        },
+        {
+            "Count": "let a = Array.of(3, 11, 8); "
+        },
+        {
+            "Count": "输出：[3,11,8] "
+        }
+    ],
+    "Title12": "@、ES6 Arrar.from() 将两类对象转为真正的数组 ",
+    "ArrayMethod12": [{
+            "Count": "定义：用于将两类对象转为真正的数组（不改变原对象，返回新的数组）"
+        },
+        {
+            "Count": "目的：Array.of() 出现的目的是为了解决上述构造器因参数个数不同，导致的行为有差异的问题  "
+        },
+        {
+            "Count": "参数： "
+        },
+        {
+            "Count": "第一个参数(必需):要转化为真正数组的对象 "
+        },
+        {
+            "Count": "第二个参数(可选): 类似数组的map方法，对每个元素进行处理，将处理后的值放入返回的数组 "
+        },
+        {
+            "Count": "第三个参数(可选): 用来绑定this "
+        },
+        {
+            "Count": "let obj = {0: 'a', 1: 'b', 2:'c', length: 3}; "
+        },
+        {
+            "Count": "let arr = Array.from(obj); // ['a','b','c']; "
+        }
+    ],
+    "Title13": "ES6: copyWithin() 指定位置的成员复制到其他位置 ",
+    "ArrayMethod13": [{
+            "Count": "定义：用于将两类对象转为真正的数组（不改变原对象，返回新的数组）"
+        },
+        {
+            "Count": "语法: array.copyWithin(target, start = 0, end = this.length) "
+        },
+        {
+            "Count": "参数: "
+        },
+        {
+            "Count": "三个参数都是数值，如果不是，会自动转为数值. "
+        },
+        {
+            "Count": "target（必需）：从该位置开始替换数据。如果为负值，表示倒数 "
+        },
+        {
+            "Count": "start（可选）：从该位置开始读取数据，默认为 0。如果为负值，表示倒数 "
+        },
+        {
+            "Count": "end（可选）：到该位置前停止读取数据，默认等于数组长度。使用负数可从数组结尾处规定位置"
+        },
+        {
+            "Count": "var a=['OB1','Koro1','OB2','Koro2','OB3','Koro3','OB4','Koro4','OB5','Koro5']"
+        },
+        {
+            "Count": "2位置开始被替换,3位置开始读取要替换的 5位置前面停止替换 "
+        },
+        {
+            "Count": "a.copyWithin(2,3,5) "
+        },
+        {
+            "Count": "输出：['OB1','Koro1','Koro2','OB3','OB3','Koro3','OB4','Koro4','OB5','Koro5'] "
+        }
+    ],
+    "Title14": "ES6: fill() 填充数组 ",
+    "ArrayMethod14": [{
+            "Count": "定义: 使用给定值，填充一个数组。"
+        },
+        {
+            "Count": "语法: array.copyWithin(target, start = 0, end = this.length) "
+        },
+        {
+            "Count": "参数: "
+        },
+        {
+            "Count": "第一个元素(必须): 要填充数组的值 "
+        },
+        {
+            "Count": "第二个元素(可选): 填充的开始位置,默认值为0 "
+        },
+        {
+            "Count": "第三个元素(可选)：填充的结束位置，默认是为this.length "
+        },
+        {
+            "Count": "['a', 'b', 'c'].fill(7)    // [7, 7, 7]"
+        }
+    ],
+    "Title15": "indexOf() 查找数组是否存在某个元素，返回下标 ",
+    "ArrayMethod15": [{
+            "Count": "定义:  返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1"
+        },
+        {
+            "Count": "语法: array.indexOf(searchElement,fromIndex)"
+        },
+        {
+            "Count": "参数: "
+        },
+        {
+            "Count": "searchElement(必须):被查找的元素 "
+        },
+        {
+            "Count": "fromIndex(可选):开始查找的位置(不能大于等于数组的长度，返回-1)，接受负值，默认值为0 "
+        },
+        {
+            "Count": "严格相等的搜索: "
+        },
+        {
+            "Count": "数组的indexOf搜索跟字符串的indexOf不一样,数组的indexOf使用严格相等===搜索元素，即数组元素要完全匹配才能搜索成功"
+        },
+        {
+            "Count": "注意：indexOf()不能识别NaN"
+        }
+    ],
+    "Title16": "lastIndexOf() 查找指定元素在数组中的最后一个位置 ",
+    "ArrayMethod16": [{
+            "Count": "定义: 方法返回指定元素,在数组中的最后一个的索引，如果不存在则返回 -1。（从数组后面往前查找）"
+        },
+        {
+            "Count": "语法:arr.lastIndexOf(searchElement,fromIndex)"
+        },
+        {
+            "Count": "参数: "
+        },
+        {
+            "Count": "searchElement(必须): 被查找的元素 "
+        },
+        {
+            "Count": "fromIndex(可选): 逆向查找开始位置，默认值数组的长度-1，即查找整个数组 "
+        },
+        {
+            "Count": "关于fromIndex有三个规则: "
+        },
+        {
+            "Count": "正值。如果该值大于或等于数组的长度，则整个数组会被查找"
+        },
+        {
+            "Count": "负值。将其视为从数组末尾向前的偏移。(比如-2，从数组最后第二个元素开始往前查找)"
+        },
+        {
+            "Count": "负值。其绝对值大于数组长度，则方法返回 -1，即数组不会被查找"
+        }
+    ],
+    "Title17": "ES7 includes() 查找数组是否包含某个元素 返回布尔",
+    "ArrayMethod17": [{
+            "Count": "定义:返回一个布尔值，表示某个数组是否包含给定的值"
+        },
+        {
+            "Count": "语法:arr.lastIndexOf(searchElement,fromIndex)"
+        },
+        {
+            "Count": "参数: "
+        },
+        {
+            "Count": "array.includes(searchElement,fromIndex=0) "
+        },
+        {
+            "Count": "fromIndex(可选):默认值为0，参数表示搜索的起始位置，接受负值。正值超过数组长度，数组不会被搜索，返回false。负值绝对值超过长数组度，重置从0开始搜索"
+        },
+        {
+            "Count": "includes方法是为了弥补indexOf方法的缺陷而出现的: "
+        },
+        {
+            "Count": "indexOf方法不能识别NaN"
+        },
+        {
+            "Count": "indexOf方法检查是否包含某个值不够语义化，需要判断是否不等于-1，表达不够直观"
+        },
+        {
+            "Count": "负值。其绝对值大于数组长度，则方法返回 -1，即数组不会被查找"
+        }
+    ]
+}

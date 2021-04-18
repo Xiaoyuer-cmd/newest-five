@@ -20,21 +20,36 @@ export default new Router({
         {
             path: '/netry',
             name: 'netry',
-            redirect: '/viewIndex', // 设置默认打开子路由的页面
-            component: () => import( /* webpackChunkName: "group-foo" */ '../views/entry/netry.vue'), //路由分割模式
+            redirect: '/index', // 设置默认打开子路由的页面
+            component: () => import( /* webpackChunkName: "group-foo" */ '@/views/entry/netry.vue'), //路由分割模式
             // component: resolve => require(['@/views/entry/entry.vue'], resolve), //懒加载模式
-            meta: {
-                title: '首页'
-            },
             children: [{
-                path: '/viewIndex',
-                name: 'viewIndex',
-                // component: () => import( /* webpackChunkName: "group-foo" */ '../views/entry/netry.vue'), //路由分割模式
-                component: resolve => require(['@/views/view/viewIndex.vue'], resolve), //懒加载模式
-                meta: {
-                    title: 'JS数组操作'
+                    path: '/',
+                    name: 'index',
+                    // component: () => import( /* webpackChunkName: "group-foo" */ '../views/entry/netry.vue'), //路由分割模式
+                    component: resolve => require(['@/views/components/index/index.vue'], resolve), //懒加载模式
+                    meta: {
+                        title: '首页'
+
+                    },
                 },
-            }, ]
-        }
+                {
+                    path: '/array',
+                    name: '/array',
+                    component: resolve => require(['@/views/view/array.vue'], resolve),
+                    meta: {
+                        title: '数组操作'
+                    },
+                },
+                {
+                    path: '/traversal',
+                    name: '/traversal',
+                    component: resolve => require(['@/views/view/traversal.vue'], resolve),
+                    meta: {
+                        title: '数组遍历'
+                    },
+                }
+            ]
+        },
     ]
 })
